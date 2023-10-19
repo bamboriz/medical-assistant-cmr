@@ -9,13 +9,12 @@ This project is a medical assistant chatbot named Medico. It is designed to resp
 - Handles errors gracefully and prevents the application from crashing.
 
 ## Usage
-To use the chatbot, simply type your query into the text area and click the "Submit Query" button. The chatbot will then process your query and provide a response.
+To use the chatbot, simply run the command below and type your query into the text area and click the "Submit Query" button. The chatbot will then process your query and provide a response.
+
+```streamlit run app.py```
 
 ## Development
 This project was developed using Python and the Streamlit library for the web interface. The chatbot uses the OpenAI API for natural language processing.
 
 ## Future Improvements
 Future improvements to this project could include adding more detailed responses, improving the error handling, and expanding the range of queries the chatbot can respond to.
-
-## Author
-This project was developed by an amazing software engineer who is always striving to improve and learn new skills.
