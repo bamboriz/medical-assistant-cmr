@@ -5,7 +5,7 @@ This project is a medical assistant chatbot named Medico. It is designed to resp
 
 <div style="display: flex; justify-content: space-around;">
     <img src="assets/demo.jpg" alt="App Screenshot" width="300"/>
-    <img src="assets/demo.jpg" alt="App Screenshot" width="300"/>
+    <img src="assets/demo1.jpg" alt="App Screenshot" width="300"/>
 </div>
 
 ## Features
