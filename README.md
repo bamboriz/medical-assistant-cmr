@@ -1,9 +1,9 @@
 # Medical Assistant CMR
 
-<img src="assets/demo.jpg" alt="App Screenshot" width="500"/>
-
 ## Overview
 This project is a medical assistant chatbot named Medico. It is designed to respond to medical queries and provide relevant information. The chatbot uses the GPT-4 model from OpenAI for natural language processing and understanding.
+
+<img src="assets/demo.jpg" alt="App Screenshot" width="500"/>
 
 ## Features
 - Responds to medical queries with relevant information.
