@@ -12,14 +12,9 @@ def get_response(query):
             tools=tools,
             agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION,
             verbose=True)
-    prompt = f'''
-        You are a helpful medical assistant! You only respond to medical queries and say 'I don't know' for anything else!
-        Let's decode the way to respond to the queries.
-        For all medical queries in addition to providing a relevant answer, also add the details (name, availability, location and contact info ...) of 1 or more relevant Medical personnel.
-        When no specialist matches, recommend a General Practitioner.
-        Think step by step
-        {query}
-        '''
+    with open('prompts/medical_query_prompt.txt', 'r') as file:
+        prompt_template = file.read()
+    prompt = prompt_template.format(query=query)
     response = agent.run(prompt)
     return response
 
