@@ -2,12 +2,10 @@ import streamlit as st
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import initialize_agent
 from langchain.agents import AgentType
-from config import OPENAI_API_KEY
-from query_answer import get_answer_to_query
-from medical_specialists import get_medical_specialists
+from config import *
 from retrieval_tool import info_retrieval_tool
 
-st.set_page_config(page_title="👨‍💻 Talk with your CSV")
+st.set_page_config(page_title="👨‍💻 Chat with Medico")
 
 st.title("👨‍💻 Chat with Medico")
 
@@ -30,3 +28,4 @@ if st.button("Submit Query", type="primary"):
         '''
     response = agent.run(prompt)
     st.write(response)
+
