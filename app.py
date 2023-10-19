@@ -11,6 +11,7 @@ from langchain.agents import initialize_agent
 from langchain.agents import AgentType
 
 load_dotenv()
+
 OPENAI_API_KEY  = os.environ['OPENAI_API_KEY']
 openai.api_key = OPENAI_API_KEY
 
@@ -48,7 +49,7 @@ def info_retrieval_tool():
     """
 
     def get_details(specialist: str) -> str:
-        data = "specialist_doctors_repo.csv"
+        data = "./data/specialist_doctors_repo.csv"
         df = pd.read_csv(data, encoding='latin-1')
         agent = create_pandas_dataframe_agent(OpenAI(temperature=0, max_tokens=512, model_name='gpt-4'), df, verbose=True)
         prompt = f''' 
@@ -68,28 +69,9 @@ st.set_page_config(page_title="👨‍💻 Talk with your CSV")
 
 st.title("👨‍💻 Chat with Medico")
 
-st.write("Please upload your CSV file below.")
-data = st.file_uploader("Upload a CSV" , type="csv")
-
 query = st.text_area("Send a Message")
 
 if st.button("Submit Query", type="primary"):
-    # response = get_answer_to_query(query)
-    # specialists = get_medical_specialists(response)
-    # st.write(response)
-    
-    # df = pd.read_csv(data, encoding='latin-1')
-    # prompt = f'''
-    #         Let's decode the way to respond to the queries.  
-    #         Return name, availability, location and contact info for the most relevant medical personnel.
-    #         Specialist request: {specialists}
-    #         '''
-    # agent = create_pandas_dataframe_agent(OpenAI(temperature=0, max_tokens=512, model_name='gpt-4'), df, verbose=True)
-    # response = agent.run(prompt)
-
-    # st.write(response)
-    # st.write(specialists)
-
     tools = [info_retrieval_tool()]
     llm = ChatOpenAI(temperature=0, model_name='gpt-4')
     agent = initialize_agent(llm=llm,
