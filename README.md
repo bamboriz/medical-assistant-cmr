@@ -9,9 +9,10 @@ This project is a medical assistant chatbot named Medico. It is designed to resp
 </div>
 
 ## Features
-- Responds to medical queries with relevant information.
-- Provides details of relevant medical personnel for specific medical queries.
-- Handles errors gracefully and prevents the application from crashing.
+- Answers only medical queries: The chatbot is designed with guardrails and system prompts to ensure it only responds to medical queries.
+- Adds specialist info if available for medical queries: If a query is related to a specific medical specialty, the chatbot will provide information about relevant specialists.
+- Returns specialist info from data repository: The chatbot retrieves information about medical specialists from a data repository, ensuring the information provided is accurate and up-to-date.
+- Handles errors gracefully: The chatbot is designed to handle errors gracefully, preventing the application from crashing and providing useful error messages.
 
 ## Usage
 To use the chatbot, simply run the command below and type your query into the text area and click the "Submit Query" button. The chatbot will then process your query and provide a response.
