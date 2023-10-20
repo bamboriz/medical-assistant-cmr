@@ -21,9 +21,9 @@ def get_response(query):
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-st.set_page_config(page_title="👨‍💻 Chat with Medico")
+st.set_page_config(page_title="👨‍💻 Chat with Bati")
 
-st.title("👨‍💻 Chat with Medico")
+st.title("👨‍💻 Chat with Bati")
 
 query = st.text_area("Send a Message")
 
